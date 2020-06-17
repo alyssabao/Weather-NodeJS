@@ -14,11 +14,11 @@
 {{#if forecast}}
 <div class="bodyFormat">
     <h1>Weather at {{city_name}}</h1>
-    <ul>
-        <li>Temperature: {{forecast.temp}}°C</li>
-        <li>Description: {{forecast.weather.0.description}}</li>
-    </ul>
+    <h2>{{forecast.temp}}°C</h2>
+    <h3>{{forecast.weather.0.description}}</h3>
 </div>
 
 
 {{/if}}
+
+<script src="/javascripts/getLocation.js"></script>
