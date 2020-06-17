@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" style="color: white">Alyssa's Weather App</a>
+    <form class="form-inline" action="/" method="GET">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter city here" aria-label="Search" name="city">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Get Forecast</button>
+    </form>
+</nav>
+
+{{!-- <form action="/" method="GET">
+    <input name="city" placeholder="Enter a city name" required>
+    <input type="submit" value="Get Forecast">
+</form> --}}
+
+{{#if forecast}}
+<div class="bodyFormat">
+    <h1>Weather at {{city_name}}</h1>
+    <ul>
+        <li>Temperature: {{forecast.temp}}°C</li>
+        <li>Description: {{forecast.weather.0.description}}</li>
+    </ul>
+</div>
+
+
+{{/if}}
